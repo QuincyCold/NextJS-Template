@@ -1,0 +1,32 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "extends": [
+        "next/core-web-vitals",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "no-duplicate-imports": "error",
+        "no-func-assign": "error",
+        "arrow-body-style": ["error", "as-needed"],
+        "camelcase": [
+            "error",
+            {
+                "properties": "always",
+                "ignoreDestructuring": false,
+                "ignoreImports": false,
+                "ignoreGlobals": false
+            }
+        ],
+        "curly": "error",
+        "default-case": "error",
+        "no-empty": "error",
+        "no-empty-function": "error",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "error",
+        "@next/next/no-img-element": "off"
+    }
+}

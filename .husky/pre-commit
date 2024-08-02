@@ -1,0 +1,5 @@
+#!/bin/bash
+
+npm run pre-commit-check
+# Add other commands (e.g., tests)
+exit $?

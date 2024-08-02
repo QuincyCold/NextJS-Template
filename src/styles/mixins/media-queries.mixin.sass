@@ -1,0 +1,65 @@
+// Sass Mixin for Media Queries
+// You can use this mixin to write media queries in your sass files.
+// Also you can modify the breakpoints's value and name according to your needs.
+// The order of the media queries is important. Otherwise, the media queries will not work as expected.
+// In this default case by using max width, place the media queries from first to last in the following order: xxl, xl, lg, md, sm.
+
+// ================== Breakpoints ==================
+// Why substract 0.02 from the breakpoints when using maxwidth?
+// Because the max-width media queries are exclusive.
+// If you don't substract 0.02 from the breakpoints, the media queries will overlap each other.
+// For example, because the range for $sm is >= 576px and < 768px; the range for $md >= 768px and < 991px.
+// If you don't substract 0.02 from the breakpoints, the range for $md will be >= 767.98px and < 991px.
+// This will cause the range for $md to overlap with the range for $sm.
+// So, the media queries will not work as expected.
+$xxl: 1399.98px
+$xl: 1199.98px
+$lg: 991.98px
+$md: 767.98px
+$sm: 575.98px
+// ================== Breakpoints ==================
+
+// ================== Mixins ==================
+@mixin media-xxl
+  @media screen and (max-width: $xxl)
+    @content
+
+@mixin media-xl
+  @media screen and (max-width: $xl)
+    @content
+
+@mixin media-lg
+  @media screen and (max-width: $lg)
+    @content
+
+@mixin media-md
+  @media screen and (max-width: $md)
+    @content
+
+@mixin media-sm
+  @media screen and (max-width: $sm)
+    @content
+
+// ================== Mixins ==================
+
+// ================== Usage ==================
+// @import '~@/styles/mixins/mixins.sass'
+
+// .className
+//     color: black // default value
+
+//     @include media-xxl // first order
+//         color: purple
+
+//     @include media-xl // second order
+//         color: yellow
+
+//     @include media-lg // third order
+//         color: blue
+
+//     @include media-md // fourth order
+//         color: green
+
+//     @include media-sm // fifth order
+//         color: red
+// ================== Usage ==================

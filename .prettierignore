@@ -1,0 +1,18 @@
+# Folders
+.husky
+.next
+node_modules
+.public
+
+# Files
+.env
+.env*.local
+.eslintignore
+.eslintrc.json
+.prettierignore
+.prettierrc
+next.config.mjs
+*.svg
+*.json
+*.d.ts
+*.md
